@@ -24,6 +24,8 @@ group :assets do
 
 end
 
+gem 'lazy_high_charts'
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password

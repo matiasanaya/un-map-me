@@ -80,4 +80,9 @@ class ProductsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  # GET /products/1/stats
+  def stats
+    @product = Product.find(params[:id])
+  end
 end
