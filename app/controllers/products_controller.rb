@@ -15,10 +15,17 @@ class ProductsController < ApplicationController
     end
   end
 
+  def hag
+    @products = Product.all
+    flash.now.alert = "Great Job!"
+    render "showcase"
+  end
   # GET /products/1
   # GET /products/1.json
   def show
     @product = Product.find(params[:id])
+    @hag = Hag.new
+    @hag.product = @product
 
     respond_to do |format|
       format.html # show.html.erb

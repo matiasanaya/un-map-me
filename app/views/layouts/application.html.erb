@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>unMAPme</title>
+  <title>Compass</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -11,20 +11,24 @@
 <div class="container-fluid">
 	<div class="navbar navbar-inverse" style="margin-top:10px;">
 	  <div class="navbar-inner">
-	    <a class="brand" href="#">COMPASS</a>
-	    <ul class="nav pull-right">
+	    <span class="brand"><img src="/compass.png" class="" width="40px" style="padding-left:10px;margin-right:10px;"><span style="position:relative;top:5px;">COMPASS</span></span>
+	    <ul class="nav pull-right" style="margin-right:20px;">
       	<% if signed_in? %>
 					<li><%= link_to "Sign out", signout_path %></li>
 					<li><%= current_user.email %></li>
 				<% else %>
-					<li><%= link_to "Sign in", signin_path %></li>
+					<li style="position:relative;top:12px;"><%= link_to "Sign in", signin_path %></li>
 				<% end %>
 	    </ul>
+	    <form class="navbar-search hidden-phone pull-right" style="position:relative;top:12px;margin-right:5%;">
+  				<input type="text" placeholder="Search" class="span5">
+		</form>
 	  </div>
 	</div>
 	<div id="sidebar" class="span2">
-		<h5>AboutMe</h5>
-		<p>I hate coding</p>
+		<h4><i class="icon-tags"></i><a href="/showcase">Shop</a></h4>
+		<h4 style="background-color:#34495E"><i class="icon-comments"></i><a href="#">Feed</a></h4>
+		<h4><i class="icon-user"></i><a href="#">Profile</a></h4>
 	</div>
 	<div class="span10">
 		<% if flash[:alert] %>

@@ -4,6 +4,7 @@ UnMapMe::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
 
+  match "/products/:id/hag" => "products#hag"
   get "showcase" => "products#showcase"
   get "products/:id/stats" => "products#stats"
   match "signout" => "sessions#destroy", :as => "signout", via: :delete

@@ -13,14 +13,32 @@
  */
 
 #sidebar {
-	background-color: #3498DB;
+	background-color: #2C3E50;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+}
+
+#sidebar * {
+	color: white;
+	text-decoration: none;
+}
+
+#sidebar > h4 > i {
+	margin-right: 15%;
+}
+
+#sidebar > h4 {
+	padding: 10%;
 }
 
 .product_block {
-	background-color: #1ABC9C;
+	background-color: #16A085;
 	overflow: hidden;
-	padding: 2%;
+	/*padding: 2%;*/
 	margin-bottom: 2%;
+	border-radius: 10px;
 }
 
 .product_block .alternative_color {
