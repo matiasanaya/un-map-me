@@ -11,3 +11,23 @@
  *= require_self
  *= require_tree .
  */
+
+#sidebar {
+	background-color: #3498DB;
+}
+
+.product_block {
+	background-color: #1ABC9C;
+	overflow: hidden;
+	padding: 2%;
+	margin-bottom: 2%;
+}
+
+.product_block .alternative_color {
+	background-color: #1ABC9C;
+}
+
+.product_block > img {
+	/*margin-top: 10px;*/
+	/*margin-left: 10px;*/
+}

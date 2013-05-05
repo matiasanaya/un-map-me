@@ -11,9 +11,8 @@
 <div class="container-fluid">
 	<div class="navbar navbar-inverse" style="margin-top:10px;">
 	  <div class="navbar-inner">
-	    <a class="brand" href="#">un MAP me</a>
+	    <a class="brand" href="#">COMPASS</a>
 	    <ul class="nav pull-right">
-	      <li class="active"><a href="#">Home</a></li>
       	<% if signed_in? %>
 					<li><%= link_to "Sign out", signout_path %></li>
 					<li><%= current_user.email %></li>
@@ -23,7 +22,7 @@
 	    </ul>
 	  </div>
 	</div>
-	<div class="span2">
+	<div id="sidebar" class="span2">
 		<h5>AboutMe</h5>
 		<p>I hate coding</p>
 	</div>

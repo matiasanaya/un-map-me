@@ -1,1 +1,5 @@
-<%= @products %>
+<div class="row-fluid">
+  <% @products.each do |product| %>
+      <%= render partial: "product_block", locals: { :product => product } %>
+  <% end %>
+</div>
