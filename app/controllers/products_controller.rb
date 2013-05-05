@@ -1,4 +1,9 @@
 class ProductsController < ApplicationController
+  # GET /showcase
+  def showcase
+    @products = Product.all
+  end
+
   # GET /products
   # GET /products.json
   def index
