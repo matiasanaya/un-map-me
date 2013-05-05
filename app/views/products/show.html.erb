@@ -3,10 +3,14 @@
   <h1><%= @product.name %></h1>
 </div>
 <div class="span3"><img src="/<%= @product.id %>.png" style=""></div>
-<div class="span4">
-  <%= form_for @hag, :url => { :action => "hag" }, :html => {:class => "nifty_form"} do |f| %>
-    <%= f.text_field :value, placeholder: 'Pay less than...' %>
-    <%= f.submit "Haggle", class: 'btn btn-large btn-block btn-primary' %>
+<div class="span4 offset1">
+  <% if @product.hags.count == 0 %>
+    <%= form_for @hag, :url => { :action => "hag" }, :html => {:class => "nifty_form", style:"margin-top:50px;"} do |f| %>
+      <%= f.text_field :value, placeholder: 'Pay less than...' %>
+      <%= f.submit "Haggle", class: 'btn btn-large btn-block btn-primary' %>
+    <% end %>
+  <% else %>
+    <div class="btn btn-large btn-block btn-info" style="margin-top:50px;"><h4>You are in for $<%= @product.hags.last.value %></h4></div>
   <% end %>
 </div>
 

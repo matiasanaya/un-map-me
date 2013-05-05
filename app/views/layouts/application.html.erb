@@ -13,12 +13,7 @@
 	  <div class="navbar-inner">
 	    <span class="brand"><img src="/compass.png" class="" width="40px" style="padding-left:10px;margin-right:10px;"><span style="position:relative;top:5px;">COMPASS</span></span>
 	    <ul class="nav pull-right" style="margin-right:20px;">
-      	<% if signed_in? %>
-					<li><%= link_to "Sign out", signout_path %></li>
-					<li><%= current_user.email %></li>
-				<% else %>
-					<li style="position:relative;top:12px;"><%= link_to "Sign in", signin_path %></li>
-				<% end %>
+			<li style="position:relative;top:12px;"><a>matiasanaya@gmail.com</a></li>
 	    </ul>
 	    <form class="navbar-search hidden-phone pull-right" style="position:relative;top:12px;margin-right:5%;">
   				<input type="text" placeholder="Search" class="span5">

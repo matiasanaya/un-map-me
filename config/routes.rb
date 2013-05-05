@@ -10,7 +10,7 @@ UnMapMe::Application.routes.draw do
   match "signout" => "sessions#destroy", :as => "signout", via: :delete
   match "signin" => "sessions#new", :as => "signin"
   match "signup" => "users#new", :as => "signup"
-  root :to => "products#index"
+  root :to => "products#showcase"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

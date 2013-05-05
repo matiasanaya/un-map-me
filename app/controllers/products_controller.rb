@@ -16,6 +16,9 @@ class ProductsController < ApplicationController
   end
 
   def hag
+    @hag = Hag.new(params[:hag])
+    @hag.product = Product.find params[:id]
+    @hag.save
     @products = Product.all
     flash.now.alert = "Great Job!"
     render "showcase"
