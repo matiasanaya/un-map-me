@@ -1,5 +1,8 @@
 <div class="row-fluid">
-  <% @products.each do |product| %>
+  <% @products.each_with_index do |product, i| %>
+      <% if i%4 == 0 %>
+        </div><div class="row">
+      <% end %>
       <%= render partial: "product_block", locals: { :product => product } %>
   <% end %>
 </div>
