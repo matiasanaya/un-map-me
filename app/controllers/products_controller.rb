@@ -96,5 +96,15 @@ class ProductsController < ApplicationController
   # GET /products/1/stats
   def stats
     @product = Product.find(params[:id])
+    @chart = LazyHighCharts::HighChart.new('graph') do |f|
+      f.title({ :text=> @product.name})
+      f.options[:xAxis][:categories] = ['0', '50', '100', '150', '200', '250']
+      f.series(:type=> 'spline',:name=> 'Price point ($)', :data=> [1500, 1450, 1400, 1300, 1200, 1000])
+      f.series(:type=> 'spline',:name=> 'Whole Sale ($)', :data=> [1200, 1200, 1200, 1200, 1200, 1200])
+      f.colors[:colors] = ['#1ABC9C','#2ECC71','#A0E12A','#A0EEAA','#A0DE12A']
+      # f.options[:chart][:backgroundColor] = '#3498DB'
+      # f.options[:yAxis][:alternateGridColor] = '#2980B9'
+      # f.options[:yAxis][:gridLineColor] = ''
+    end
   end
 end
