@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   # force_ssl # should be added in production
+  before_filter :current_user
 
   private
 

@@ -1,13 +1,13 @@
-<h1>Log in</h1>
-
-<%= form_tag sessions_path do %>
+<%= form_tag sessions_path, class: 'form-signin' do %>
+	<h2 class="form-signin-heading">Please sign in</h2>
   <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
+    <%= text_field_tag :email, params[:email], placeholder: "Email address" %>
   </div>
   <div class="field">
-    <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
-  <div class="actions"><%= submit_tag "Log in" %></div>
+  <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+  <button class="btn btn-large btn-primary" type="submit">Sign in</button>
 <% end %>
