@@ -1,4 +1,4 @@
-unMAP.me
+unMAP.me or Compass (since i do not need MAP)
 =========
 
 A tool to hack Minimum Advertised Priced policies

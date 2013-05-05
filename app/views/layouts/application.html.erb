@@ -8,20 +8,18 @@
 </head>
 <body>
 
-<% if flash[:alert] %>
-	<div class="alert">
-		<%= flash[:alert] %>
-	</div>
-<% end %>
-
 <div class="container-fluid">
 	<div class="navbar navbar-inverse" style="margin-top:10px;">
 	  <div class="navbar-inner">
 	    <a class="brand" href="#">un MAP me</a>
 	    <ul class="nav pull-right">
 	      <li class="active"><a href="#">Home</a></li>
-	      <li><a href="#">Link</a></li>
-	      <li><a href="#">Link</a></li>
+      	<% if signed_in? %>
+					<li><%= link_to "Sign out", signout_path %></li>
+					<li><%= current_user.email %></li>
+				<% else %>
+					<li><%= link_to "Sign in", signin_path %></li>
+				<% end %>
 	    </ul>
 	  </div>
 	</div>
@@ -30,6 +28,11 @@
 		<p>I hate coding</p>
 	</div>
 	<div class="span10">
+		<% if flash[:alert] %>
+			<div class="alert">
+				<%= flash[:alert] %>
+			</div>
+		<% end %>
 		<%= yield %>
 	</div>
 </div>

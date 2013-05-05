@@ -1,14 +1,14 @@
 UnMapMe::Application.routes.draw do
   
   resources :products
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
   get "products/:id/stats" => "products#stats"
-  get "logout" => "sessions#destroy", :as => "logout"
-  get "login" => "sessions#new", :as => "login"
-  get "signup" => "users#new", :as => "signup"
-  root :to => "sessions#new"
-  resources :users
-  resources :sessions
+  match "signout" => "sessions#destroy", :as => "signout", via: :delete
+  match "signin" => "sessions#new", :as => "signin"
+  match "signup" => "users#new", :as => "signup"
+  root :to => "products#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
