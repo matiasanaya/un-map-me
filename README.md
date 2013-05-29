@@ -1,12 +1,11 @@
-unMAP.me or Compass (since i do not need MAP)
-=========
+unMAP.me
+========
 
-A tool to hack Minimum Advertised Priced policies
-Compass, shopping without a map.
+Also known as Compass (since i do not need MAP), is a tool to socialy hack Minimum Advertised Priced policies. This project was built during the SF 2013 AngelHacks Hackathon.
 
 
-Stuff
-=====
+Structure
+---------
 
 User - Basic sign in functionality
 
@@ -16,7 +15,7 @@ Price Point - What a user is willing to pay for a product
 
 
 Pitch
-=====
+-----
 
 I believe in stuff on the internet being cheaper than on physical stores. That's why I hate Minimum Advertised Price policies.
 
